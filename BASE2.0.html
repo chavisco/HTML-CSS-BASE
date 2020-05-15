@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BASE</title>
+		<link rel="stylesheet" href="css/CSS.css">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fredoka+One&family=Roboto+Mono:wght@100&display=swap"
+			rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+		<script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header>
+			<nav class="menu">
+				<ul>
+					<li><a href="http://sc.senai.br/">Senai</a></li>
+					<li><a href="#portfolio">Codigo</a></li>
+					<li><a href="#contato">Links</a></li>
+				</ul>
+			</nav>
+			<div class="titulo">
+				<h1 class="site-title">Atividade</h1>
+				<h2 class="site-subtitle">BASE DATA</h2>
+				<h2 class="site-subtitle">Gustavo P</h2>
+			</div>
+		</header>
+		<section class="portfolio" id="portfolio">
+			<h2 class="efeitoH2">Codigo</h2>
+			<div class="Tabela">
+				<H4> BASE TITULO</H4><br>
+				<h5>
+					BASE TEXTO
+					<h5>
+			</div>
+			<br>
+			<h6>"Você entende a tristeza de uma estrela que não pode retornar para os céus? ~letty</h6>
+			<br>
+		</section>
+		<section class="contato" id="contato">
+			<h2>Links</h2>
+
+			<div class="grid icons">
+				<a target="_blank" href="https://www.alura.com.br/formacao-html-e-css">
+					<i class="fab fa-html5"></i>
+				</a>
+				<a target="_blank" href="https://www.alura.com.br/formacao-html-e-css">
+					<i class="fab fa-css3-alt"></i>
+				</a>
+				<a target="_blank" href="https://www.alura.com.br/formacao-react-js">
+					<i class="fab fa-js-square"></i>
+				</a>
+				<a target="_blank"
+					href="https://open.spotify.com/playlist/4d9LZavckw8CAeruEIC6l6?si=UsN7IB96Sz6jGaMZlUTKKw">
+					<i class="fab fa-spotify"></i>
+				</a>
+				<BR>
+				<BB>
+					<BR>
+					<BR>
+					<BR><BR>
+			</div>
+			<center>
+				<h1 class="animaçao">
+					<span class="letters letters-1">ようこそ</span>
+					<span class="letters letters-2">待つ</span>
+					<span class="letters letters-3">あなたが好きなもの!</span>
+			</center>
+		</section>
+		</h1>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+		<script type="text/javascript">
+			var animaçao = {};
+			animaçao.opacityIn = [0, 1];
+			animaçao.scaleIn = [0.2, 1];
+			animaçao.scaleOut = 3;
+			animaçao.durationIn = 800;
+			animaçao.durationOut = 600;
+			animaçao.delay = 500;
+
+			anime.timeline({
+				loop: true
+			})
+				.add({
+					targets: '.animaçao .letters-1',
+					opacity: animaçao.opacityIn,
+					scale: animaçao.scaleIn,
+					duration: animaçao.durationIn
+				}).add({
+					targets: '.animaçao .letters-1',
+					opacity: 0,
+					scale: animaçao.scaleOut,
+					duration: animaçao.durationOut,
+					easing: "easeInExpo",
+					delay: animaçao.delay
+				}).add({
+					targets: '.animaçao.letters-2',
+					opacity: animaçao.opacityIn,
+					scale: animaçao.scaleIn,
+					duration: animaçao.durationIn
+				}).add({
+					targets: '.animaçao .letters-2',
+					opacity: 0,
+					scale: animaçao.scaleOut,
+					duration: animaçao.durationOut,
+					easing: "easeInExpo",
+					delay: animaçao.delay
+				}).add({
+					targets: '.animaçao .letters-3',
+					opacity: animaçao.opacityIn,
+					scale: animaçao.scaleIn,
+					duration: animaçao.durationIn
+				}).add({
+					targets: '.animaçao .letters-3',
+					opacity: 0,
+					scale: animaçao.scaleOut,
+					duration: animaçao.durationOut,
+					easing: "easeInExpo",
+					delay: animaçao.delay
+				}).add({
+					targets: '.animaçao',
+					opacity: 0,
+					duration: 500,
+					delay: 500
+				});
+		</script>
+		<script>
+			function typeWriter(elemento) {
+				const textoArray = elemento.innerHTML.split('');
+				elemento.innerHTML = '';
+				textoArray.forEach((letra, i) => {
+					setTimeout(() => elemento.innerHTML += letra, 75 * i);
+				});
+			}
+			const titulo = document.querySelector('h6');
+			typeWriter(titulo);
+		</script>
+	</body>
+
+</html>
